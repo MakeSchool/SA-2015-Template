@@ -14,7 +14,7 @@
 		39E35A9D1B447A5A0073BB9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39E35A9B1B447A5A0073BB9B /* LaunchScreen.xib */; };
 		39E35AA91B447A5A0073BB9B /* MySocialNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E35AA81B447A5A0073BB9B /* MySocialNetworkTests.swift */; };
 		39E35AB71B447CA80073BB9B /* ParseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E35AB61B447CA80073BB9B /* ParseLoginHelper.swift */; };
-		7F5CDE3CD2171123390232C9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35228113C50BBDB33AB908DE /* libPods.a */; };
+		8087D8A439DF5F4CDDDC8585 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B19106BA1B4D3BCBF8A98B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		35228113C50BBDB33AB908DE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E35A8D1B447A5A0073BB9B /* MySocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E35A911B447A5A0073BB9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E35A921B447A5A0073BB9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		39E35AA81B447A5A0073BB9B /* MySocialNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySocialNetworkTests.swift; sourceTree = "<group>"; };
 		39E35AB21B447C280073BB9B /* MySocialNetwork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MySocialNetwork-Bridging-Header.h"; sourceTree = "<group>"; };
 		39E35AB61B447CA80073BB9B /* ParseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoginHelper.swift; sourceTree = "<group>"; };
+		49B19106BA1B4D3BCBF8A98B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C287325DFB4E562FA4A3D68 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		60D3AAA850339D84B74437B1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F5CDE3CD2171123390232C9 /* libPods.a in Frameworks */,
+				8087D8A439DF5F4CDDDC8585 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +67,7 @@
 		0F7D3BBA1CB49558B5C7FCC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				35228113C50BBDB33AB908DE /* libPods.a */,
+				49B19106BA1B4D3BCBF8A98B /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,6 +153,7 @@
 				39E35A8A1B447A5A0073BB9B /* Frameworks */,
 				39E35A8B1B447A5A0073BB9B /* Resources */,
 				A8BC191F0B75F64DD94EE6D6 /* Copy Pods Resources */,
+				36C36EEFC4DBC3E081B36E31 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +253,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		36C36EEFC4DBC3E081B36E31 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A8BC191F0B75F64DD94EE6D6 /* Copy Pods Resources */ = {
